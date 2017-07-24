@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CharactersService } from './shared/services/characters.service';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { EntitiesService } from './shared/services/entities.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
   imports: [
     BrowserModule
   ],
-  providers: [CharactersService],
+  providers: [CharactersService, EntitiesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
