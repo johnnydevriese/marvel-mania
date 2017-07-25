@@ -34,7 +34,15 @@ export abstract class EntitiesService {
     // TODO: Add API key globally for all requests to Marvel Entities API
     // my public key: c810c6473deab0ebe70dd29f10bec5f8
     // old api key  : e82e1f8eb16da85c0260676f2cdb05b2
-    baseSearchParams.set('apikey', 'e82e1f8eb16da85c0260676f2cdb05b2');
+    // per Marvel docs we need timestamp (ts) and hash is ts+private_key+public_key
+    // ex: For example, a user with a public key of "1234"
+    // and a private key of "abcd" could construct a valid call as follows:
+    // http://gateway.marvel.com/v1/public/comics?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150
+    // (the hash value is the md5 digest of 1abcd1234)
+    // TODO: change this vary the time stamp and make a new MD5 hash for each request.
+    baseSearchParams.set('apikey', 'c810c6473deab0ebe70dd29f10bec5f8');
+    baseSearchParams.set('ts', '07-22-2017');
+    baseSearchParams.set('hash', '11ab65fee700b4ae33ce761cf8bdee79');
     return baseSearchParams;
   }
 
