@@ -32,6 +32,8 @@ export abstract class EntitiesService {
   private getBaseSearchParams() {
     let baseSearchParams = new URLSearchParams();
     // TODO: Add API key globally for all requests to Marvel Entities API
+    // my public key: c810c6473deab0ebe70dd29f10bec5f8
+    // old api key  : e82e1f8eb16da85c0260676f2cdb05b2
     baseSearchParams.set('apikey', 'e82e1f8eb16da85c0260676f2cdb05b2');
     return baseSearchParams;
   }

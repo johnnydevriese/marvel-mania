@@ -1,14 +1,14 @@
-import { MarvelManiaPage } from './app.po';
+import { MarvelHeroesPage } from './app.po';
 
-describe('marvel-mania App', () => {
-  let page: MarvelManiaPage;
+describe('marvel-heroes App', function() {
+  let page: MarvelHeroesPage;
 
   beforeEach(() => {
-    page = new MarvelManiaPage();
+    page = new MarvelHeroesPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

@@ -3,11 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { EntitiesService } from '../../services/entities.service';
 
 import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/switchMap';
 
 @Component({
-  // selector: 'mh-entities-list',
-  selector: 'app-entities-list',
+  selector: 'mh-entities-list',
   templateUrl: './entities-list.component.html',
   styleUrls: ['./entities-list.component.css']
 })
